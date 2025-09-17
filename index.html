@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RareToons Style Video Site</title>
+  <title>Anime crunchy India - RareToons Style Video Site</title>
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4}
     html,body{height:100%;margin:0;font-family:Inter, system-ui, sans-serif;background:linear-gradient(180deg,#071224 0%, #071826 100%);color:#e6eef6}
@@ -30,41 +30,27 @@
     .site-header .nav a {text-decoration:none;font-size:14px;color:#e6eef6;transition:color .2s;}
     .site-header .nav a:hover {color:var(--accent);}
 
-    /* ✅ Responsive Grid (side by side) */
-    .grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(160px, 1fr));gap:18px;}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));padding:10px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6);display:flex;flex-direction:column;align-items:center}
-    .card img{width:100%;aspect-ratio:9/16;border-radius:10px;display:block;object-fit:cover;}
+    /* ✅ Responsive Grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));gap:18px;}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));padding:10px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6);display:flex;flex-direction:column;align-items:center;text-align:center}
+    .card img{width:100%;aspect-ratio:9/16;border-radius:10px;display:block;object-fit:cover;margin:0 auto;}
     .card a{margin-top:10px;padding:8px 12px;border-radius:8px;text-decoration:none;background:rgba(255,255,255,0.04);color:var(--accent);font-weight:600;font-size:14px;}
-    .meta{width:100%;display:flex;justify-content:space-between;align-items:center;padding-top:8px}
-    .meta .title{font-size:14px;color:#dbeafe}
+    .meta{width:100%;display:flex;flex-direction:column;align-items:center;padding-top:8px}
+    .meta .title{font-size:14px;color:#dbeafe;font-weight:bold}
     .meta .badge{font-size:12px;color:var(--muted)}
+
+    .description{margin-top:30px;line-height:1.7;font-size:15px;color:#cbd5e1}
+    .description h2{color:var(--accent);margin-bottom:10px}
+    .description p{margin-bottom:14px}
+
     footer{margin-top:28px;padding:14px 10px;border-top:1px solid rgba(255,255,255,0.03);text-align:center;color:var(--muted);font-size:13px}
-
-    /* modal */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.7);z-index:40}
-    .modal.open{display:flex}
-    .modal .box{width:min(980px,96%);background:#000;border-radius:10px;padding:8px}
-    .modal iframe{width:100%;aspect-ratio:16/9;max-height:620px;border:0;border-radius:8px}
-    .modal .close{position:absolute;top:18px;right:22px;color:#fff;background:transparent;border:0;font-size:20px}
-
-    /* Age gate overlay */
-    .age-gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:linear-gradient(0deg, rgba(2,6,23,0.95), rgba(2,6,23,0.95))}
-    .age-panel{background:var(--card);padding:24px;border-radius:12px;max-width:420px;width:92%;text-align:center;box-shadow:0 8px 40px rgba(2,6,23,0.7)}
-    .age-panel h2{margin:0 0 8px;font-size:18px}
-    .age-panel p{color:var(--muted);font-size:14px;margin:0 0 12px}
-    .age-panel input[type=date]{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;width:100%}
-    .age-panel .row{display:flex;gap:8px;margin-top:12px}
-    .age-panel button{flex:1;padding:10px;border-radius:8px;border:0;background:var(--accent);color:#022;cursor:pointer;font-weight:700}
-    .age-panel .deny{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .notice{color:#fca5a5;margin-top:10px;font-size:13px}
-    small.hint{display:block;margin-top:10px;color:var(--muted)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- ✅ New Header -->
+    <!-- ✅ Header -->
     <header class="site-header">
-      <div class="logo">🎬 RareToons Style</div>
+      <div class="logo">🎬 Anime crunchy India</div>
       <nav class="nav">
         <a href="#">Home</a>
         <a href="#videoGrid">Videos</a>
@@ -77,106 +63,58 @@
         <!-- ✅ Demon Slayer Movie Card -->
         <div class="card">
           <img src="https://i.postimg.cc/nhL5FdPR/a-FRDH3-P7-TX61-FVGpa-Lh-Kr6-Qi-OC1.jpg" alt="Demon Slayer Movie Thumbnail" />
-          <a href="https://animedekho.co/movies/demon-slayer-kimetsu-no-yaiba-infinity-castle/" target="_blank" class="watch">Watch Now</a>
+          <a href="index1.html" class="watch">Watch Now</a>
           <div class="meta">
-            <div class="title">Demon Slayer: Infinity Castle</div>
+            <div class="title">✅ Download Demon Slayer: Kimetsu no Yaiba Infinity Castle (2025) Movie BluRay Full Movie (Hindi-Tamil-English) 480p & 720p & 1080p Qualities</div>
             <div class="badge">Movie • Sub/Dub</div>
           </div>
         </div>
       </section>
+
+      <!-- ✅ Description Section -->
+      <section class="description">
+        <h2>Movie Info</h2>
+        <p>📰 Full Name: Demon Slayer: Kimetsu no Yaiba Infinity Castle (2025)<br>
+        Run Time: 2h 35m<br>
+        🕓 Release Year: (12 September) 2025<br>
+        🌟 Rating: PG – 7.4<br>
+        🎭 Genre: Animation, Action, Fantasy, Thriller<br>
+        🎬 Quality: (360p, 480p, 720p, 1080p FHD)<br>
+        Credit: Torrent<br>
+        🔊 Language: Hindi, Tamil</p>
+
+        <p><strong>Movie Story:</strong> The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.</p>
+
+        <h2>About Anime crunchy India</h2>
+        <p><strong>The best site to Watch/Download Anime & Cartoon in Hindi Dub for FREE</strong><br>
+        In Early 2025, realizing the scarcity of user-friendly platforms offering Hindi, Tamil, and Telugu-dubbed anime, we embarked on creating RareToonsIndia. Our aim was to revolutionize the anime streaming experience, addressing the deficiencies prevalent on existing platforms. Anime crunchy India acts as an aggregator, indexing content available on other platforms. It’s important to note that Anime crunchy India does not host any content; everything is sourced from third-party providers. We bear no responsibility for content hosted on external sites.</p>
+
+        <h3>1/ What’s Anime crunchy India?</h3>
+        <p>A haven for anime enthusiasts, offering a diverse array of anime titles dubbed in Hindi, Tamil, and Telugu, all accessible for free in high-definition quality. Additionally, users can download their favorite anime at no cost.</p>
+
+        <h3>2/ Is Anime crunchy India safe?</h3>
+        <p>Absolutely. Safety is paramount to us. We encourage users to promptly report any suspicious activities. However, please understand that advertisements are necessary for site maintenance.</p>
+
+        <h3>3/ What makes Anime crunchy India the best site to watch anime free online?</h3>
+        <ul>
+          <li>Extensive Content Library: Largest collection of Hindi/Tamil/Telugu dubbed anime</li>
+          <li>Timely Updates with latest releases</li>
+          <li>Intuitive User Interface for easy browsing</li>
+          <li>Device Compatibility for mobile & desktop</li>
+        </ul>
+
+        <p>If you seek a reliable and secure platform for free anime streaming, give Anime crunchy India a try. Spread the word and bookmark our site for future anime adventures.</p>
+      </section>
     </main>
 
     <footer id="footer">
-      &copy; <span id="year"></span> RareToons Style. All rights reserved.
+      &copy; <span id="year"></span> Anime crunchy India. All rights reserved.
     </footer>
   </div>
 
-  <!-- Video modal -->
-  <div class="modal" id="playerModal" aria-hidden="true">
-    <div class="box" role="dialog" aria-modal="true">
-      <iframe id="playerFrame" src="" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
-    </div>
-    <button class="close" id="closeBtn">✕</button>
-  </div>
-
-  <!-- Age gate (no login) -->
-  <div class="age-gate" id="ageGate" aria-hidden="false">
-    <div class="age-panel">
-      <h2>आयु सत्यापन (Age verification)</h2>
-      <p>यह सामग्री 18 वर्ष से ऊपर के दर्शकों के लिए है। कृपया जन्मतिथि दर्ज करें।</p>
-      <input type="date" id="dob" max="9999-12-31" />
-      <div class="row">
-        <button id="verifyBtn">Verify</button>
-        <button class="deny" id="denyBtn">I am under 18</button>
-      </div>
-      <div class="notice" id="notice"></div>
-      <small class="hint">यह सिर्फ क्लाइंट-साइड सत्यापन है — कोई लॉगिन नहीं।</small>
-    </div>
-  </div>
-
   <script>
-    // set footer year
+    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Handle modal open/close
-    const modal = document.getElementById('playerModal');
-    const iframe = document.getElementById('playerFrame');
-    const closeBtn = document.getElementById('closeBtn');
-
-    function openPlayer(url){
-      iframe.src = url;
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden','false');
-    }
-    function closePlayer(){
-      iframe.src = '';
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden','true');
-    }
-    closeBtn.addEventListener('click', closePlayer);
-    modal.addEventListener('click', (e)=>{ if(e.target===modal) closePlayer(); });
-
-    // wire watch buttons
-    document.querySelectorAll('.watch').forEach(a=>{
-      a.addEventListener('click', e=>{
-        // इस case में direct new tab खुलेगा, modal नहीं
-      })
-    })
-
-    // Age verification logic
-    const gate = document.getElementById('ageGate');
-    const dobInput = document.getElementById('dob');
-    const notice = document.getElementById('notice');
-
-    if(localStorage.getItem('ageVerified')==='true'){ gate.style.display='none'; }
-
-    function calculateAge(birth) {
-      const today = new Date();
-      const b = new Date(birth);
-      let age = today.getFullYear() - b.getFullYear();
-      const m = today.getMonth() - b.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < b.getDate())) age--;
-      return age;
-    }
-
-    document.getElementById('verifyBtn').addEventListener('click', ()=>{
-      const val = dobInput.value;
-      if(!val){ notice.textContent = 'कृपया अपनी जन्मतिथि चुनें।'; return; }
-      const age = calculateAge(val);
-      if(age >= 18){
-        localStorage.setItem('ageVerified','true');
-        gate.style.display='none';
-        notice.textContent='';
-      }else{
-        notice.textContent = 'आप 18 वर्ष से कम के हैं — आप कंटेंट नहीं देख सकते।';
-      }
-    });
-
-    document.getElementById('denyBtn').addEventListener('click', ()=>{
-      notice.textContent = 'आप 18 वर्ष से कम के हैं — प्रवेश वर्जित।';
-    });
-
-    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape'){ closePlayer(); } });
   </script>
 </body>
 </html>

@@ -4,13 +4,96 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Anime crunchy India - RareToons Style Video Site</title>
+  <link rel="icon" type="image/jpg" href="https://img.freepik.com/premium-photo/unique-anime-logo-collection_1046319-127146.jpg">
   <meta name="description" content="The best site to Watch/Download Anime & Cartoon in Hindi Dub for FREE. RareToonsIndia offers Hindi, Tamil, and Telugu dubbed anime with timely updates, simple interface, and device compatibility.">
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, sans-serif;background:linear-gradient(180deg,#071224 0%, #071826 100%);color:#e6eef6}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, sans-serif;background:linear-gradient(180deg,#071224 0%, #071826 100%);color:#e6eef6;scroll-behavior:smooth}
     .wrap{max-width:1100px;margin:30px auto;padding:20px}
-
-    /* ✅ Sticky Site Header */
+    
+    /* Telegram Notification Styles */
+    .telegram-notification {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #0b1220 0%, #071826 100%);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 12px;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 8px 32px rgba(2, 6, 23, 0.8);
+      z-index: 1000;
+      max-width: 90%;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+    }
+    
+    .telegram-notification.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(20px);
+    }
+    
+    .telegram-notification .message {
+      flex: 1;
+      font-size: 14px;
+      color: #e6eef6;
+    }
+    
+    .telegram-notification .join-btn {
+      background: var(--accent);
+      color: #0b1220;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .telegram-notification .join-btn:hover {
+      background: #0ea5e9;
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+    }
+    
+    .telegram-notification .close-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 18px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+    
+    .telegram-notification .close-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #e6eef6;
+    }
+    
+    /* Responsive styles for notification */
+    @media (max-width: 600px) {
+      .telegram-notification {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .telegram-notification .message {
+        font-size: 13px;
+      }
+    }
+    
     .site-header {
       position:sticky;
       top:0;
@@ -30,8 +113,11 @@
     .site-header .nav {display:flex;gap:20px;}
     .site-header .nav a {text-decoration:none;font-size:14px;color:#e6eef6;transition:color .2s;}
     .site-header .nav a:hover {color:var(--accent);}
-
-    /* ✅ Responsive Side by Side Grid */
+    @media (max-width:600px){
+      .site-header .logo{font-size:16px;}
+      .site-header .nav{gap:10px;}
+      .site-header{padding:10px 14px;}
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -45,6 +131,11 @@
       box-shadow:0 6px 24px rgba(2,6,23,0.6);
       text-align:center;
       max-width:180px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.6);
     }
     .card img {
       width:100%;
@@ -63,6 +154,12 @@
       font-weight:600;
       font-size:13px;
       display:inline-block;
+      transition:all .25s ease;
+    }
+    .card a:hover {
+      background: var(--accent);
+      color: #0b1220;
+      box-shadow: 0 0 10px var(--accent);
     }
     .meta {
       margin-top:8px;
@@ -76,30 +173,27 @@
       font-size:11px;
       color:var(--muted);
     }
-
     .description{margin-top:30px;line-height:1.7;font-size:15px;color:#cbd5e1}
     .description h2{color:var(--accent);margin-bottom:10px}
     .description p{margin-bottom:14px}
-
     footer{margin-top:28px;padding:14px 10px;border-top:1px solid rgba(255,255,255,0.03);text-align:center;color:var(--muted);font-size:13px}
+    footer a{color:var(--accent);text-decoration:none}
+    footer a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- ✅ Header -->
+  <div class="wrap" id="top">
     <header class="site-header">
       <div class="logo">🎬 Anime crunchy India</div>
       <nav class="nav">
-        <a href="#">Home</a>
+        <a href="#top">Home</a>
         <a href="#videoGrid">Videos</a>
-        <a href="#footer">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <!-- ✅ Video Grid Section -->
       <section class="grid" id="videoGrid">
-        <!-- Demon Slayer Movie Card -->
         <div class="card">
           <img src="https://i.postimg.cc/nhL5FdPR/a-FRDH3-P7-TX61-FVGpa-Lh-Kr6-Qi-OC1.jpg" alt="Demon Slayer Movie Thumbnail" />
           <a href="index1.html" class="watch">Watch Now</a>
@@ -108,8 +202,6 @@
             <div class="badge">Movie • Sub/Dub</div>
           </div>
         </div>
-
-        <!-- Lord of Mysteries Card -->
         <div class="card">
           <img src="https://i.postimg.cc/3xhNZLnJ/MV5-BMWE1-ZWYw-ZGUt-Zj-Rm-OS00-Nz-Uz-LTlk-Zm-Ut-MTEw-Mj-Nh-NTVm-NDIw-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Lord of Mysteries Thumbnail" />
           <a href="index2.html" class="watch">Watch Now</a>
@@ -120,22 +212,52 @@
         </div>
       </section>
 
-      <!-- ✅ Description Section -->
       <section class="description">
         <h2>About Anime crunchy India</h2>
         <p><strong>The best site to Watch/Download Anime & Cartoon in Hindi Dub for FREE</strong><br>
-        In Early 2025, realizing the scarcity of user-friendly platforms offering Hindi, Tamil, and Telugu-dubbed anime, we embarked on creating Anime crunchy India. Our aim was to revolutionize the anime streaming experience, addressing the deficiencies prevalent on existing platforms. Anime crunchy India acts as an aggregator, indexing content available on other platforms. It’s important to note that Anime crunchy India does not host any content; everything is sourced from third-party providers. We bear no responsibility for content hosted on external sites.</p>
+        In Early 2025, realizing the scarcity of user-friendly platforms offering Hindi, Tamil, and Telugu-dubbed anime, we embarked on creating Anime crunchy India. Our aim was to revolutionize the anime streaming experience, addressing the deficiencies prevalent on existing platforms. Anime crunchy India acts as an aggregator, indexing content available on other platforms. It's important to note that Anime crunchy India does not host any content; everything is sourced from third-party providers. We bear no responsibility for content hosted on external sites.</p>
       </section>
     </main>
 
-    <footer id="footer">
-      &copy; <span id="year"></span> Anime crunchy India. All rights reserved.
+    <footer id="contact">
+      &copy; <span id="year"></span> Anime crunchy India. All rights reserved. |
+      <a href="mailto:contact@animecrunchyindia.com">Email Us</a> |
+      <a href="https://t.me/animecrunchyindia" target="_blank" rel="noopener noreferrer">Join us on Telegram</a>
     </footer>
   </div>
 
+  <!-- Telegram Notification -->
+  <div class="telegram-notification" id="telegramNotification">
+    <div class="message">Join us on our Telegram channel for the latest updates!</div>
+    <a href="https://t.me/animecrunchyindia" target="_blank" class="join-btn">Join Now</a>
+    <button class="close-btn" id="closeNotification">&times;</button>
+  </div>
+
   <script>
-    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Telegram notification functionality
+    const telegramNotification = document.getElementById('telegramNotification');
+    const closeNotification = document.getElementById('closeNotification');
+    
+    // Show notification after page loads
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        telegramNotification.classList.remove('hidden');
+      }, 1000);
+    });
+    
+    // Close notification when close button is clicked
+    closeNotification.addEventListener('click', () => {
+      telegramNotification.classList.add('hidden');
+    });
+    
+    // Close notification when clicking outside of it
+    document.addEventListener('click', (e) => {
+      if (!telegramNotification.contains(e.target) && !telegramNotification.classList.contains('hidden')) {
+        telegramNotification.classList.add('hidden');
+      }
+    });
   </script>
 </body>
 </html>
